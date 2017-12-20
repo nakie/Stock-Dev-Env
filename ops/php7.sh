@@ -11,6 +11,7 @@ sudo apt-get update
 sudo apt-get -y install php7.0-cli php7.0-common libapache2-mod-php7.0 php7.0 
 
 # Install PHP Modules
+
 sudo apt-get -y install php7.0-mysql php7.0-fpm php7.0-gd php7.0-curl php-mcrypt php7.0-mbstring php7.0-xml php-xdebug
 
 # Edit Config to set Timezone in apache config file
@@ -19,7 +20,3 @@ sudo sed -i "/date.timezone \=/c date.timezone \= America\/Chicago" /etc/php/7.0
 # update time zone in CLI config file.
 sudo sed -i "/date.timezone \=/c date.timezone \= America\/Chicago" /etc/php/7.0/cli/php.ini
 
-# Enable xDebug Remote Debugging
-# sudo sed -i "$ xdebug.remote_enable = 1" /etc/php/7.0/mods-available/xdebug.ini
-
-# PS1="React-Form: \w\$ "
